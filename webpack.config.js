@@ -5,9 +5,7 @@ module.exports = {
     entry: './frontend/entry.jsx',
     output: {
         path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-        filename: 'bundle.js',
-        devtoolModuleFilenameTemplate: '[resourcePath]',
-        devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -15,6 +13,12 @@ module.exports = {
                 test: [/\.jsx?$/],
                 exclude: /node_modules/,
                 loader: 'babel-loader',
+                options: {
+                    presets: [
+                        "@babel/preset-env",
+                        "@babel/preset-react"
+                    ]
+                }
                 
             }
         ]
