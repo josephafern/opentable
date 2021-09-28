@@ -13,3 +13,228 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+     box-sizing: border-box;
+ }
+ html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+#app {
+    height: 2000px;
+}
+
+ .modal-show {
+    display: block;
+    position: fixed;
+    text-align: center;
+    top: 80px;
+    width: 250px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.10);
+    border-radius: 5px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 5px 5px;
+    font-family: 'Nunito', sans-serif;
+    color: gray;
+    background-color: white;
+    z-index: 2;
+}
+
+.modal-hide {
+    display: none;
+    
+}
+
+.modal-back {
+    visibility: visible;
+    height: 2000px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: gray;
+    opacity: 40%;
+    z-index: 1;
+    border: 1px solid gray;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border: 1px solid gray;
+    align-items: center;
+    z-index: 1;
+    background-color: white;
+    border-left: none;
+    border-right: none;
+    padding-right: 20px;
+    padding-top: 7px;
+}
+
+.navbar h1 {
+    font-family: 'Nunito', sans-serif;
+    padding-left: 20px;
+}
+
+.modal-btn {
+    visibility: visible;
+    height: 35px;
+    width: 80px;
+    font-size: 12px;
+    margin: auto 5px;
+    background-color: white;
+    border: 1px solid gray;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 4px;
+    color: gray;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.inner-modal-btn {
+    visibility: visible;
+    height: 40px;
+    width: 200px;
+    font-size: 12px;
+    margin-top: auto;
+    margin-bottom: 15px;
+    background-color: white;
+    border: 1px solid gray;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 4px;
+    color: gray;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.inner-modal-btn:hover {
+    color: white;
+    background-color: #da3743;
+    border-top: #da3743;
+    cursor: pointer;
+}
+
+.modal-input {
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 5px;
+}
+
+.modal-btn:hover {
+    color: white;
+    background: #247f9e;
+    border-color: #247f9e;
+    cursor: pointer;
+}
+
+.clicked {
+    color: white;
+    background: #247f9e;
+    border-color: #247f9e;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.user-show {
+    margin-top: 100px;
+    margin-left: 40px;
+    z-index: 2;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.errors {
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(74, 74, 74)
+}
+
+.close {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    align-self: flex-end;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-img {
+    position: absolute;
+    height: 600px;
+    width: 1200px;
+    top: 60px;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.splash {
+    text-align: center;
+}

@@ -7,9 +7,13 @@ class UserShow extends React.Component {
         super(props);
     }
 
+    componentDidMount(){
+        window.scrollTo(0, 0);
+    }
+
     render(){
         return (
-            <div>
+            <div className='user-show'>
                 <p>ID: {this.props.user.id}</p>
                 <p>Username: {this.props.user.username}</p>
                 <button onClick={this.props.logoutUser}>Logout</button>

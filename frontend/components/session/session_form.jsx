@@ -7,13 +7,23 @@ class SessionForm extends React.Component {
             username: "",
             password: ""
         };
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoTime = this.demoTime.bind(this);
+    }
+
+    componentDidMount(){
+        this.props.clearErrors();
     }
 
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(() => this.props.hideModal());
+    }
+
+    demoTime(e) {
+        e.preventDefault();
+        this.props.demoUser({username: 'demo_user', password: '123456'}).then(() => this.props.hideModal());
     }
 
     update(field) {
@@ -32,40 +42,33 @@ class SessionForm extends React.Component {
                         </p>
                     ))}
                 </div>
-            )
+            );
         } else {
             return null;
         }
-        
     }
 
     render(){
         return (
-            <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to OpenTable!
-                    
-                    Please {this.props.formType} or {this.props.navLink}
-                    {/* {this.renderErrors()} */}
-                    <div className="login-form">
-                        
-                        <label>Username:
-                            <input type="text"
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                className="login-input"
-                            />
+            <div>
+                <form className='form' onSubmit={this.handleSubmit}>
+                    <button className='close' type='button' onClick={this.props.hideModal}>✕</button>
+                    <br/><br/>
+                    <h2 className='modal-title'>{this.props.formType}</h2>
+                    <br/>
+                    <div className='errors'>{this.renderErrors()}</div>
+                    <div>
+                        <label>
+                            <input className='modal-input' type="text" value={this.state.username} onChange={this.update('username')} placeholder='Username'/>
                         </label>
-                        <br />
-                        <label>Password:
-                            <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
-                            />
+                        <br/>
+                        <label><br/>
+                            <input className='modal-input' type="password" value={this.state.password} onChange={this.update('password')} placeholder='Password'/>
                         </label>
-                        <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+                        <br/><br/>
+                        <button className='inner-modal-btn'>{this.props.formType}</button>
+                        <br/>
+                        <button type='button' onClick={this.demoTime} className='inner-modal-btn'>Demo</button>
                     </div>
                 </form>
             </div>

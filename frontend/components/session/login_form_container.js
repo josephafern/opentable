@@ -2,19 +2,23 @@ import { connect } from 'react-redux';
 import React from 'react';
 import SessionForm from './session_form';
 import { login } from '../../actions/session_actions';
-import { Link } from 'react-router-dom';
+import {clearErrors} from '../../actions/session_actions'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
         errors: state.errors.session,
-        formType: 'login',
-        link: <Link to="/login">login instead</Link>,
+        formType: 'Log In',
+        hideModal: ownProps.hideModal
     }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-    processForm: (user) => dispatch(login(user))
-});
+const mapDispatchToProps = (dispatch) => {
+    return {
+        processForm: (user) => dispatch(login(user)),
+        clearErrors: () => dispatch(clearErrors()),
+        demoUser: (user) => dispatch(login(user))
+    }
+}
 
 export default connect(
     mapStateToProps,

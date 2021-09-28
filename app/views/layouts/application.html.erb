@@ -8,8 +8,19 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
+    <script>
+      window.bannerUrl = '<%= image_url('back.jpg') %>'
+    </script>
+    <% if current_user %>
+      <script>
+        window.currentUser = {
+          "id": <%= current_user.id %>,
+          "username": "<%= current_user.username %>"
+        }
+      </script>
+    <% end %>
   <body>
     <%= yield %>
   </body>
 </html>
+<!-- <img src={window.bannerUrl}/> -->
