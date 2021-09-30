@@ -19,6 +19,7 @@ gem 'better_errors'
 gem 'annotate'
 gem 'binding_of_caller'
 gem 'pry-rails'
+gem 'aws-sdk-s3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
