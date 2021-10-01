@@ -20,7 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
     const store = configureStore(preloadedState);
-    window.store = store;
-    window.fetchRestaurant = fetchRestaurant;
     ReactDOM.render(<Root store={store}/>, root);
 })

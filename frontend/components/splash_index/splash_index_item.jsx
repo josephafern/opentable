@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SplashIndexItem = (props) => {
     
     return (
-        <Link to={`/restaurants/${props.restaurant.id}`}>
+        <Link className='link' to={`/restaurants/${props.restaurant.id}`}>
         <div className='splash-index-item'>
             <img className='img-place' src={props.restaurant.image} />
             <p className='res-name'>{props.restaurant.name}</p>

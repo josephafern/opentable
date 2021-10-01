@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from './modal';
+import { Link } from 'react-router-dom';
 
 
 class Navbar extends React.Component {
@@ -29,7 +30,7 @@ class Navbar extends React.Component {
     render(){
         return (
             <nav className='navbar'>
-                <h1>OpenTable</h1>
+                <Link to='/' className='link'><h1>EmptyChairs</h1></Link>
                 <div style={this.props.loggedIn !== null ? {display: 'none'} : {display: 'block'}}>
                     <button className={this.state.show && this.state.modal === 'signup' ? 'modal-btn clicked' : 'modal-btn'} onClick={this.showSignup}>Sign Up</button>
                     <button className={this.state.show && this.state.modal === 'login' ? 'modal-btn clicked' : 'modal-btn'} onClick={this.showLogin}>Sign In</button>

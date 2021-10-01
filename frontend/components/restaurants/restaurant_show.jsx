@@ -1,4 +1,5 @@
 import React from 'react';
+import RestaurantInfo from './restaurant_info';
 
 class RestaurantShow extends React.Component {
     constructor(props){
@@ -20,7 +21,11 @@ class RestaurantShow extends React.Component {
         if (!this.props.restaurant) return null;
         return (
             <div>
-                <img src={this.props.restaurant.image}/>
+                <img className='res-show-img' src={this.props.restaurant.image}/>
+                <div className='show-container'>
+                    <RestaurantInfo restaurant={this.props.restaurant}/>
+                    <div className='reserve-container'>Make a reservation</div>
+                </div>
             </div>
         );
     }
