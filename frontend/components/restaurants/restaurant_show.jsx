@@ -1,5 +1,6 @@
 import React from 'react';
 import RestaurantInfo from './restaurant_info';
+import Booking from '../bookings/booking';
 
 class RestaurantShow extends React.Component {
     constructor(props){
@@ -24,7 +25,7 @@ class RestaurantShow extends React.Component {
                 <img className='res-show-img' src={this.props.restaurant.image}/>
                 <div className='show-container'>
                     <RestaurantInfo restaurant={this.props.restaurant}/>
-                    <div className='reserve-container'>Make a reservation</div>
+                    <Booking restId={this.props.restaurant.id} />
                 </div>
             </div>
         );

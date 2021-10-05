@@ -7,7 +7,8 @@ import SplashIndex from './splash_index';
 
 const mapStateToProps = (state) => {
     return {
-        restaurants: allRestaurants(state)
+        restaurants: allRestaurants(state),
+        loading: state.ui.loading.indexLoading
     }
 }
 

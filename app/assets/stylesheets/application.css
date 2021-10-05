@@ -14,6 +14,10 @@
  *= require_self
  */
 
+@import "react-datetime-picker/dist/DateTimePicker.css";
+@import "react-calendar/dist/Calendar.css";
+@import "react-clock/dist/Clock.css";
+
  * {
      box-sizing: border-box;
  }
@@ -102,6 +106,17 @@ table {
     border: 1px solid gray;
 }
 
+#booking-form-back {
+    visibility: hidden;
+    height: 2000px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    opacity: 0%;
+    z-index: 2;
+}
+
 .navbar {
     display: grid;
     grid-template-columns: 1fr 180px;
@@ -122,6 +137,10 @@ table {
 .navbar h1 {
     font-family: 'Nunito', sans-serif;
     padding-left: 20px;
+}
+
+#nav-logout {
+    margin-left: 95px;
 }
 
 .modal-btn {
@@ -233,6 +252,7 @@ input:focus::placeholder {
     top: 60px;
     left: 50%;
     margin-left: -600px;
+    object-fit: cover;
 }
 
 .splash {
@@ -396,4 +416,58 @@ input:focus::placeholder {
 span.price {
     color: teal;
     margin-left: 0;
+}
+
+.booking-container {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    top: 300px;
+    left: 50%;
+    margin-left: -200px;
+    z-index: 1;
+    text-align: center;
+    padding-top: 40px;
+    
+    
+}
+
+.date-time {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    color: rgb(84, 84, 84);
+    margin-bottom: 10px;
+}
+
+.loader {
+    border: 16px solid rgb(182, 182, 182);
+    border-top: 16px solid crimson;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 80px;
+    height: 80px;
+    animation: spin 500ms linear infinite;
+    -webkit-animation: spin 500ms linear infinite;
+    position: absolute;
+    top: 750px;
+    left: 50%;
+    margin-left: -40px;
+}
+
+@-webkit-keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

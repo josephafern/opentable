@@ -4,7 +4,8 @@ import { fetchRestaurant } from '../../actions/restaurant_actions'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        restaurant: state.entities.restaurants[ownProps.match.params.id]
+        restaurant: state.entities.restaurants[ownProps.match.params.id],
+        currentUser: state.session.id
     }
 }
 

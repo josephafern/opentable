@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
 
-    def create
+  def create
     @user = User.new(user_params)
     if @user.save
       login(@user)
@@ -8,6 +8,11 @@ class Api::UsersController < ApplicationController
     else
       render json: @user.errors.full_messages, status: 422
     end
+  end
+
+  def show
+    @user = User.includes(:reservation).where(maker_id: params[:id])
+    render :show
   end
 
   private

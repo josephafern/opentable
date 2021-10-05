@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from './modal';
+import Modal from '../modal';
 import { Link } from 'react-router-dom';
 
 
@@ -36,7 +36,7 @@ class Navbar extends React.Component {
                     <button className={this.state.show && this.state.modal === 'login' ? 'modal-btn clicked' : 'modal-btn'} onClick={this.showLogin}>Sign In</button>
                 </div>
                 <div style={this.props.loggedIn !== null ? { display: 'block' } : { display: 'none' }}>
-                    <button className='modal-btn' onClick={this.props.logoutUser}>Log Out</button>
+                    <button id='nav-logout' className='modal-btn' onClick={this.props.logoutUser}>Log Out</button>
                 </div>
                 <Modal show={this.state.show} modal={this.state.modal} hideModal={this.hideModal} />
             </nav>

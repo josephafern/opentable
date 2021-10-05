@@ -4,6 +4,10 @@ class User < ApplicationRecord
   validates_uniqueness_of :username, :session_token
   validates :password, length: { minimum: 6, maximum: 12 }, allow_nil: true
 
+  has_many :reservations,
+    foreign_key: :maker_id,
+    class_name: :Booking
+
   before_validation :ensure_session_token
   
   attr_reader :password 

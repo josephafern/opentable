@@ -1,15 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-class Booking extends React.Component {
-    constructor(){
-
-    }
-
-    render(){
-        return (
-            <div className='booking-container'>
-                
+const Booking = (props) => {
+    return (
+        <Link to={`/restaurants/${props.restId}/bookings/new`}>
+            <div className='reserve-container'>
+                Make a reservation!!
             </div>
-        );
-    }
+        </Link>
+    );
 }
+
+export default Booking;

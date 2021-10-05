@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchRestaurant } from './actions/restaurant_actions'
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
@@ -20,5 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
     const store = configureStore(preloadedState);
+    window.store = store;
     ReactDOM.render(<Root store={store}/>, root);
 })

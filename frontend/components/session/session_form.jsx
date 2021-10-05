@@ -53,9 +53,9 @@ class SessionForm extends React.Component {
             <div>
                 <form className='form' onSubmit={this.handleSubmit}>
                     <button className='close' type='button' onClick={this.props.hideModal}>✕</button>
-                    <br/><br/>
-                    <h2 className='modal-title'>{this.props.formType}</h2>
                     <br/>
+                    <h2 className='modal-title'>{this.props.formType}</h2>
+                   
                     <div className='errors'>{this.renderErrors()}</div>
                     <div>
                         <label>
