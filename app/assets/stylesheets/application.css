@@ -492,9 +492,7 @@ h1 {
     display: block;
 }
 
-.hidden {
-    display: none;
-}
+
 
 h2 {
     font-family: 'Nunito', sans-serif;
@@ -539,6 +537,28 @@ h2 {
 
 .footer a {
     text-decoration: none;
+}
+
+.logout-section {
+    width: 150px;
+    display: block;
+}
+
+.profile-btn {
+    color: gray;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    margin-left: 50px;
+    color: rgb(174, 174, 174);
+}
+
+.profile-btn:hover {
+    color: #247f9e;
+}
+
+.hidden {
+    display: none;
 }
 
 @-webkit-keyframes spin {
