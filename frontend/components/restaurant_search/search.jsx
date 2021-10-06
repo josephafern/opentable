@@ -1,4 +1,6 @@
 import React from 'react';
+import { BiSearchAlt } from 'react-icons/bi';
+import { FaChair } from 'react-icons/fa';
 
 class RestaurantSearch extends React.Component {
     
@@ -25,12 +27,15 @@ class RestaurantSearch extends React.Component {
 
     render(){
         return (
-            <div className='search-container'>
-                <form onSubmit={this.handleSubmit}>
+            
+            
+            <div className={this.props.index ? 'search-container addon':'search-container'}>
+                <h1 className={this.props.index ? 'hidden' : ''}>Find a chair <FaChair className='search-title-icon'/> for any occasion!</h1>
+                <form className='search-form' onSubmit={this.handleSubmit}>
                     <label>
-                        <input type='search' onChange={this.update}/>
+                        <input className='search-input' type='search' onChange={this.update} placeholder='Search by restaurant name or cuisine-type'/>
                     </label>
-                    <button>Search</button>
+                    <button className='search-btn'>Let's go<BiSearchAlt className='search-btn-img' /></button>
                 </form>
             </div>
         );

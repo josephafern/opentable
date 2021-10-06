@@ -30,7 +30,7 @@ class Navbar extends React.Component {
     render(){
         return (
             <nav className='navbar'>
-                <Link to='/' className='link'><h1>EmptyChairs</h1></Link>
+                <Link to='/' className='link'><div id='nav-title'>EmptyChairs</div></Link>
                 <div style={this.props.loggedIn !== null ? {display: 'none'} : {display: 'block'}}>
                     <button className={this.state.show && this.state.modal === 'signup' ? 'modal-btn clicked' : 'modal-btn'} onClick={this.showSignup}>Sign Up</button>
                     <button className={this.state.show && this.state.modal === 'login' ? 'modal-btn clicked' : 'modal-btn'} onClick={this.showLogin}>Sign In</button>

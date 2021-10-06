@@ -12,10 +12,11 @@ input[type="time"] {
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
-    background-color: rgb(91, 91, 91);
-    height: 27px;
+    background-color: rgba(91, 91, 91, 0.475);
+    height: 29px;
     padding-top: 7px;
-    padding-left: 5px;
+    padding-left: 3px;
+    border-radius: 1px;
     cursor: pointer;
 }
 
@@ -136,7 +137,7 @@ input:focus {
 .mar-preset {
     width: 60px;
     height: 25px;
-    border: 3px solid #da3743;
+    border: 1px solid #da3743;
     display: flex;
     align-items: center;
     justify-content: center;

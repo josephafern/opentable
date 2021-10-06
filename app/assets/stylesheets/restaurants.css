@@ -5,11 +5,11 @@
 .reserve-btn {
     width: 200px;
     height: 40px;
-    border: 3px solid #da3743;
+    border: none;
     position: relative;
     top: 60px;
-    background-color: white;
-    color: #da3743;
+    background-color: #da3743;
+    color: white;
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
     border-radius: 5px;
@@ -18,7 +18,7 @@
 
 .reserve-btn:hover {
     color: white;
-    background-color: #da3743;
+    background-color: #91252c;
 }
 
 .reserve-container p {
@@ -29,6 +29,3 @@
     color: rgb(143, 143, 143);
 }
 
-.search-idx {
-    min-height: 1000px;
-}

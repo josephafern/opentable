@@ -1,0 +1,116 @@
+.search-items {
+    position: relative;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.10);
+    width: 600px;
+    left: 50%;
+    top: 150px;
+    margin-left: -300px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.search-input {
+    width: 450px;
+    height: 40px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px 0 hsl(0deg 0% 0% / 8%);
+    padding-left: 10px;
+}
+
+.search-input::placeholder {
+    color: rgba(128, 128, 128, 0.653);
+}
+
+.search-btn {
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px 0 hsl(0deg 0% 0% / 8%);
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    background-color: #da3743;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+.search-btn-img {
+    width: 22px;
+    height: 22px;
+    color: white;
+    z-index: 1;
+}
+
+.search-btn:hover {
+    background-color: #91252c;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-idx {
+    min-height: 1200px;
+    background-color: #f0f0f0b8;
+}
+
+.search-item {
+    height: 120px;
+    border-top: 0.5px solid rgba(211, 211, 211, 0.468);
+    padding: 0 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.search-item:hover {
+    background-color: rgba(220, 219, 219, 0.214);
+}
+
+.search-item-img {
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+.s-item-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+.s-item-name {
+    color: rgb(63, 63, 63);
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+.s-item-extra {
+    color: rgb(162, 162, 162);
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    margin-top: 4px;
+    padding-left: 8px;
+}
+
+.s-item-extra span {
+    color: rgba(0, 154, 154, 0.653);
+}
+
+.search-title-icon {
+    width: 30px;
+    height: 30px;
+    color: white;
+}

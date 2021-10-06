@@ -11,10 +11,12 @@ class SearchIndex extends React.Component {
     render(){
         return (
             <div className='search-idx'>
-                <RestaurantSearchContainer/>
+                <RestaurantSearchContainer index={true}/>
+                <div className='search-items'>
                 {this.props.restaurants.map(restaurant => {
                     return <SearchIndexItem key={restaurant.id} restaurant={restaurant}/>
                 })}
+                </div>
             </div>
         );
     }
