@@ -7,7 +7,11 @@ Rails.application.routes.draw do
       resources :bookings, only: [:update, :index, :destroy]
     end
     resource :session, only: [:create, :destroy]
-    resources :restaurants, only: [:create, :show, :index]
+    resources :restaurants, only: [:create, :show, :index] do
+      collection do
+        get :search, to: 'restaurants#search', as: 'search'
+      end
+    end
     resources :bookings, only: [:create]
   end
 end

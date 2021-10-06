@@ -10,7 +10,7 @@ class Splash extends React.Component {
     render(){
         return (
             <div className='splash'>
-                <RestaurantSearchContainer />
+                <RestaurantSearchContainer history={this.props.history}/>
                 <img src={window.bannerUrl} className='hero-img'/>
                 <SplashIndexContainer />
             </div>

@@ -3,8 +3,8 @@ import SplashIndexItem from './splash_index_item';
 import LoadingIcon from '../loading_icon';
 
 class SplashIndex extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
 
     componentDidMount(){

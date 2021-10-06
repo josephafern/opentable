@@ -9,10 +9,9 @@ class BookingForm extends React.Component {
             maker_id: this.props.user,
             restaurant_id: parseInt(this.props.restaurant.id),
             date: currDate.toISOString().slice(0, 10),
-            time: '19:30',
+            time: this.props.match.params.time ? this.props.match.params.time : '19:30',
             guests: 1
         }
-
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -45,7 +44,7 @@ class BookingForm extends React.Component {
         if (!this.props.restaurant) return null;
         let currDate = new Date();
         return (
-            <div>
+            <div className='booking-form-overall'>
             <div className='booking-container'>
                 <form onSubmit={this.handleSubmit}>
                     <h2>{this.props.restaurant.name}</h2>

@@ -10,11 +10,13 @@ const SplashIndexItem = (props) => {
             <p className='res-name'>{props.restaurant.name}</p>
             <br/>
             <div className='res-index-info'>
-                <span>{props.restaurant.cuisine}  | </span>
-                <span>{props.restaurant.price}</span>
+                <span>{props.restaurant.cuisine}  |  {props.restaurant.price}</span>
+                
                 <br/>
-                <span className='index-time'>7:30pm</span>
-                <span className='index-time'>8:00pm</span>
+                <div className='index-time-container'>
+                <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restaurant.id}/bookings/new/19:45`}><span className='index-time'>7:45pm</span></Link>
+                <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restaurant.id}/bookings/new/20:00`}><span className='index-time'>8:00pm</span></Link>
+                </div>
             </div>
         </div>
         </Link>

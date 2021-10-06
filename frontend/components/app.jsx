@@ -9,6 +9,8 @@ import Splash from './splash'
 import RestaurantShowContainer from './restaurants/restaurant_show_container';
 import BookingFormContainer from './bookings/booking_form_container';
 import BookingUpdate from './bookings/booking_update_container';
+import SearchIndexContainer from './restaurant_search/search_index_container';
+import Footer from './footer';
 
 const App = () => (
     <div id='app'>
@@ -16,13 +18,15 @@ const App = () => (
         <Switch>
             <Route exact path='/' component={Splash}/>
             <Route exact path='/restaurants/:id' component={RestaurantShowContainer} />
+            <Route exact path='/restaurants/search/:query' component={SearchIndexContainer}/>
             <ProtectedRoute exact path='/restaurants/:restId/bookings/new' component={BookingFormContainer} />
+            <ProtectedRoute path='/restaurants/:restId/bookings/new/:time' component={BookingFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <ProtectedRoute exact path='/users/:id' component={UserShowContainer} />
             <ProtectedRoute exact path='/users/:id/bookings/:bookingId' component={BookingUpdate}/>
         </Switch>
+        <Footer />
     </div>
-
 );
 
 export default App;

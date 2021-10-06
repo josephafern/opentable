@@ -11,3 +11,11 @@ export const fetchRestaurant = (restId) => {
         url: `/api/restaurants/${restId}`
     });
 }
+
+export const findRestraurants = (query) => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/restaurants/search`,
+        data: { query }
+    });
+}

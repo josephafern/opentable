@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Reservation from './reservation';
 
 class UserShow extends React.Component {
 
@@ -9,27 +10,34 @@ class UserShow extends React.Component {
 
     componentDidMount(){
         window.scrollTo(0, 0);
-        this.props.fetchBookingsByUser(this.props.match.params.id);
+        this.props.fetchRestaurants().then(() => this.props.fetchBookingsByUser(this.props.match.params.id));
+    }
+
+    componentDidUpdate(){
+        window.scrollTo(0, 0);
     }
 
     render(){
         return (
             <div className='user-show'>
-                <p>ID: {this.props.user.id}</p>
-                <p>Username: {this.props.user.username}</p>
-                <ul>
-                    {Object.keys(this.props.reservations).map(key => {
-                        return (
-                        <div>
-                        <li >{this.props.reservations[key].date}</li>
-                        <li >{this.props.reservations[key].time}</li>
-                        <li >{this.props.reservations[key].guests}</li>
-                        <Link to={`/users/${this.props.user.id}/bookings/${key}`}><button>Update</button></Link>
-                                <button onClick={() => this.props.deleteBooking(this.props.reservations[key])
-                                    .then(() =>this.props.history.push(`/users/${this.props.user.id}`))}>Delete</button>
-                        </div>);
-                    })}
-                </ul>
+                <div className='user-header'>
+                    Hello, {this.props.user.username}!
+                </div>
+                <div className='user-res-container'>
+                    <div className='user-res-title'>Upcoming Reservations</div>
+                    <ul className='user-res-items'>
+                        {Object.keys(this.props.reservations).map(key => {
+                            return (<Reservation
+                                key={key}
+                                reservation={this.props.reservations[key]}
+                                restaurant={this.props.restaurants[this.props.reservations[key].restaurant_id]}
+                                history={this.props.history}
+                                userId={this.props.user.id}
+                                deleteBooking={this.props.deleteBooking}/>);
+                        })}
+                    </ul>
+                </div>
+               
             </div>
         )
     }

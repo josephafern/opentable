@@ -21,7 +21,7 @@ class RestaurantShow extends React.Component {
     render(){
         if (!this.props.restaurant) return null;
         return (
-            <div>
+            <div className='rest-show'>
                 <img className='res-show-img' src={this.props.restaurant.image}/>
                 <div className='show-container'>
                     <RestaurantInfo restaurant={this.props.restaurant}/>
