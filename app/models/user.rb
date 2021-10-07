@@ -7,6 +7,10 @@ class User < ApplicationRecord
   has_many :reservations,
     foreign_key: :maker_id,
     class_name: :Booking
+  
+  has_many :reviews,
+    foreign_key: :author_id,
+    class_name: :Review
 
   before_validation :ensure_session_token
   

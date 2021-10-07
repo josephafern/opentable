@@ -6,5 +6,9 @@ class Restaurant < ApplicationRecord
     has_many :reservations,
         foreign_key: :restaurant_id,
         class_name: :Booking
+
+    has_many :reviews,
+        foreign_key: :restaurant_id,
+        class_name: :Review
     
 end

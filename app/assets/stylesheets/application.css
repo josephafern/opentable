@@ -391,12 +391,13 @@ input:focus::placeholder {
 .info-container {
     display: inline-block;
     width: 700px;
-    height: 1000px;
     background-color: white;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;
     border-radius: 5px;
     margin-right: 50px;
+    padding-bottom: 60px;
+    min-height: 1200px;
 }
 
 .info-container header {
@@ -415,7 +416,7 @@ input:focus::placeholder {
 .info-container span {
     margin-left: 65px;
     font-family: 'Nunito', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(103, 103, 103);
 }
 

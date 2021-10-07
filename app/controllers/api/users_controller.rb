@@ -10,8 +10,13 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.all
+    render :index
+  end
+
   def show
-    @user = User.includes(:reservation).where(maker_id: params[:id])
+    @user = User.includes(:reservations).where(maker_id: params[:id])
     render :show
   end
 

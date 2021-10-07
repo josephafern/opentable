@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Reservation from './reservation';
+import UserReview from './user_review';
 
 class UserShow extends React.Component {
 
@@ -10,7 +11,8 @@ class UserShow extends React.Component {
 
     componentDidMount(){
         window.scrollTo(0, 0);
-        this.props.fetchRestaurants().then(() => this.props.fetchBookingsByUser(this.props.match.params.id));
+        this.props.fetchRestaurants().then(() => this.props.fetchBookingsByUser(this.props.match.params.id))
+        .then(()=> this.props.fetchReviewsByUser(this.props.match.params.id));
     }
 
     componentDidUpdate(){
@@ -37,7 +39,14 @@ class UserShow extends React.Component {
                         })}
                     </ul>
                 </div>
-               
+                <div className='user-res-container'>
+                    <div className='user-res-title'>Reviews</div>
+                    <ul className='user-res-items'>
+                        {this.props.reviews.map(review => {
+                            return <UserReview review={review} restaurant={this.props.restaurants[review.restaurant_id]}/>;
+                        })}
+                    </ul>
+                </div>
             </div>
         )
     }

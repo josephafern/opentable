@@ -37,11 +37,9 @@ export const fetchRestaurants = () => (dispatch) => {
 }
 
 export const fetchRestaurant = (restId) => (dispatch) => {
-    dispatch(startLoadingRestaurant());
     return RestaurantsApiUtil.fetchRestaurant(restId).then(restaurant => dispatch(receivedRestaurant(restaurant)))
 }
 
 export const findRestraurants = (query) => (dispatch) => {
-    dispatch(startLoadingRestaurants());
     return RestaurantsApiUtil.findRestraurants(query).then(restaurants => dispatch(receivedRestaurants(restaurants)))
 }

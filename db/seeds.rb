@@ -9,6 +9,7 @@ require 'open-uri'
 
 User.destroy_all
 Restaurant.destroy_all
+Review.destroy_all
 
 User.create!(username: 'demo_user', password: '123456')
 User.create!(username: 'Fred Flinstone', password: '123456')
@@ -64,3 +65,9 @@ rest17.photo.attach(io: open('https://open-table-seeds.s3.us-west-1.amazonaws.co
 rest18.photo.attach(io: open('https://open-table-seeds.s3.us-west-1.amazonaws.com/OT-imgs/sergios-mia/MIA_105Sergios00NEWPPP.jpg'), filename: 'sergios.jpg')
 rest19.photo.attach(io: open('https://open-table-seeds.s3.us-west-1.amazonaws.com/OT-imgs/spago-lv/1566510877.84.webp'), filename: 'spago.webp')
 rest20.photo.attach(io: open('https://open-table-seeds.s3.us-west-1.amazonaws.com/OT-imgs/volcano-curry-sf/seating-area-in-the-restaurant.jpg'), filename: 'volcano-curry.jpg')
+
+Review.create!(author_id: 1, restaurant_id: 1, rating: 4, title: 'Pretty good, a couple things I\'d do different.', body: 'a')
+Review.create!(author_id: 2, restaurant_id: 1, rating: 5, title: 'Loved it!', body: 'a')
+Review.create!(author_id: 1, restaurant_id: 4, rating: 5, title: 'Best place I\'ve ever eaten!!', body: 'a')
+Review.create!(author_id: 1, restaurant_id: 20, rating: 2, title: 'Not the best. Would go elsewhere.', body: 'a')
+Review.create!(author_id: 3, restaurant_id: 1, rating: 5, title: 'Really yummy! Must-have.', body: 'a')

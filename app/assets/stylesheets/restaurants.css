@@ -29,3 +29,82 @@
     color: rgb(143, 143, 143);
 }
 
+.rest-reviews {
+    width: 570px;
+    position: relative;
+    left: 50%;
+    margin-left: -285px;
+}
+
+.rest-reviews h4 {
+    color: rgb(74, 74, 74);
+    font-family: '', sans-serif;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.rest-review {
+    display: flex;
+    background-color: white;
+    height: 250px;
+    border-top: 1px solid rgba(160, 160, 160, 0.44);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.rest-review:last-child{
+    border-radius: 0 0 5px 5px;
+}
+
+.rest-review-info {
+    margin-left: 20px;
+    padding-top: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: rgb(181, 181, 181);
+}
+
+.rest-review-info .name {
+    color: rgb(87, 87, 87);
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.rest-review-info .rating {
+    color: rgb(176, 176, 176);
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    margin-left: 15px;
+    margin-top: 30px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rest-review-info .body {
+    color: rgb(176, 176, 176);
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    margin-left: 22px;
+    margin-top: 55px;
+    position: absolute;
+    width: 380px;
+    height: 140px;
+}
+}
+
+.rest-review-info .username {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.rest-review-icon {
+    margin-right: 6px;
+}
