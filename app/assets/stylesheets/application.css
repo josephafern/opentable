@@ -557,6 +557,25 @@ h2 {
     color: #247f9e;
 }
 
+.signup-message {
+    display: flex;
+    position: sticky;
+    top: 335px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 250px;
+    border-left: 3px solid crimson;
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(176, 176, 176);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.1);
+    padding: 0 20px;
+    margin-top: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+
 .hidden {
     display: none;
 }

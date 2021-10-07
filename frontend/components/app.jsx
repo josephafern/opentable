@@ -21,7 +21,6 @@ const App = () => (
             <Route exact path='/restaurants/search/:query' component={SearchIndexContainer}/>
             <ProtectedRoute exact path='/restaurants/:restId/bookings/new' component={BookingFormContainer} />
             <ProtectedRoute path='/restaurants/:restId/bookings/new/:time' component={BookingFormContainer} />
-            <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <ProtectedRoute exact path='/users/:id' component={UserShowContainer} />
             <ProtectedRoute exact path='/users/:id/bookings/:bookingId' component={BookingUpdate}/>
         </Switch>

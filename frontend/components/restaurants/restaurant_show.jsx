@@ -25,7 +25,7 @@ class RestaurantShow extends React.Component {
                 <img className='res-show-img' src={this.props.restaurant.image}/>
                 <div className='show-container'>
                     <RestaurantInfo restaurant={this.props.restaurant}/>
-                    <Booking restId={this.props.restaurant.id} />
+                    <Booking restId={this.props.restaurant.id} loggedIn={this.props.currentUser}/>
                 </div>
             </div>
         );

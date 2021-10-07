@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Booking = (props) => {
     return (
-        
+            <div>
             <div className='reserve-container'>
             <div className='m-a-r'>Make a reservation!!</div>
             <p>Some available times:</p>
@@ -14,10 +14,12 @@ const Booking = (props) => {
             </div>
             <Link to={`/restaurants/${props.restId}/bookings/new`}><button className='reserve-btn'>Find a table!</button></Link>
             </div>
+            <div className={props.loggedIn === null ? 'signup-message' : 'signup-message hidden'}>
+                To make a reservation, please sign up or sign in.
+            </div>
+            </div>
        
     );
 }
 
 export default Booking;
-
-//Search MVP
