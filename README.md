@@ -1,9 +1,9 @@
 # Open Table Clone: Empty Chairs
 
-<img src="https://open-table-seeds.s3.us-west-1.amazonaws.com/READMEimgs/first.png" />
+<img src="https://open-table-seeds.s3.us-west-1.amazonaws.com/READMEimgs/first-final.jpg" />
 <br/>
 <a href="https://empty-chairs.herokuapp.com/#/">
-  <img src=" https://open-table-seeds.s3.us-west-1.amazonaws.com/READMEimgs/button.png"/> 
+  <img src="https://open-table-seeds.s3.us-west-1.amazonaws.com/READMEimgs/button.png" /> 
 </a>
 <br/>
 
