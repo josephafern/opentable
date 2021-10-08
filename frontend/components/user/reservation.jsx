@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdModeEdit } from 'react-icons/md';
 import { BsTrashFill } from 'react-icons/bs'
+import { convertTime } from '../../util/converters';
 
 const Reservation = (props) => {
     

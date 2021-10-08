@@ -12,9 +12,32 @@ export const fetchReviewsByRestId = (restId) => {
     });
 }
 
-export const fetchAllUsers = () => {
+export const fetchReview = (reviewId) => {
     return $.ajax({
         method: 'GET',
-        url: `/api/users`
+        url: `/api/reviews/${reviewId}`
+    });
+}
+
+export const createReview = (review) => {
+    return $.ajax({
+        method: 'POST',
+        url: `/api/reviews`,
+        data: { review }
+    });
+}
+
+export const updateReview = (review) => {
+    return $.ajax({
+        method: 'PATCH',
+        url: `/api/users/${review.author_id}/reviews/${review.id}`,
+        data: { review }
+    });
+}
+
+export const destroyReview = (review) => {
+    return $.ajax({
+        method: 'DELETE',
+        url: `/api/users/${review.author_id}/reviews/${review.id}`
     });
 }

@@ -16,7 +16,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.includes(:reservations).where(maker_id: params[:id])
+    @user = User.includes(:reservations, :reviews).where(id: params[:id]).first
     render :show
   end
 

@@ -12,9 +12,9 @@ class Api::ReviewsController < ApplicationController
     def create
         @review = Review.new(review_params)
         if @review.save
-            render json: {}
+            render :show
         else
-            render json: {}
+            render json: ['Invalid params'], status: 422
         end
     end
 

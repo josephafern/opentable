@@ -116,3 +116,11 @@
     padding-bottom: 0;
 }
 
+.rev-item-btn {
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row; 
+}
+

@@ -10,6 +10,8 @@ import RestaurantShowContainer from './restaurants/restaurant_show_container';
 import BookingFormContainer from './bookings/booking_form_container';
 import BookingUpdate from './bookings/booking_update_container';
 import SearchIndexContainer from './restaurant_search/search_index_container';
+import ReviewFormContainer from './reviews/review_form_container';
+import ReviewUpdateContainer from './reviews/review_update_container';
 import Footer from './footer';
 
 const App = () => (
@@ -18,9 +20,11 @@ const App = () => (
         <Switch>
             <Route exact path='/' component={Splash}/>
             <Route exact path='/restaurants/:id' component={RestaurantShowContainer} />
-            <Route exact path='/restaurants/search/:query' component={SearchIndexContainer}/>
+            <Route path='/restaurants/search/:query' component={SearchIndexContainer}/>
             <ProtectedRoute exact path='/restaurants/:restId/bookings/new' component={BookingFormContainer} />
             <ProtectedRoute path='/restaurants/:restId/bookings/new/:time' component={BookingFormContainer} />
+            <ProtectedRoute exact path='/restaurants/:id/reviews/new' component={ReviewFormContainer}/>
+            <ProtectedRoute exact path='/users/:id/reviews/:reviewId/edit' component={ReviewUpdateContainer}/>
             <ProtectedRoute exact path='/users/:id' component={UserShowContainer} />
             <ProtectedRoute exact path='/users/:id/bookings/:bookingId' component={BookingUpdate}/>
         </Switch>

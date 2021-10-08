@@ -6,7 +6,7 @@ class Api::RestaurantsController < ApplicationController
     end
     
     def show
-        @restaurant = Restaurant.find(params[:id])
+        @restaurant = Restaurant.includes(:reviews).where(id: params[:id]).first
         render :show
     end
 

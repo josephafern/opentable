@@ -17,9 +17,9 @@ class SplashIndex extends React.Component {
                 <div className='splash-index'>
                     {
                         this.props.restaurants.map(
-                            (restaurant) => {
+                            (restaurant, i) => {
 
-                                return <SplashIndexItem restaurant={restaurant} key={restaurant.id} />
+                                return <SplashIndexItem restaurant={restaurant} key={i} />
                             }
                         )
                     }

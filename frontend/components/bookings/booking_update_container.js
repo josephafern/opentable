@@ -4,11 +4,10 @@ import { updateBooking } from "../../actions/booking_actions";
 import { fetchRestaurant } from "../../actions/restaurant_actions";
 
 const mapStateToProps = (state, ownProps) => {
-    
     return {
-        
+        booking: state.entities.users[ownProps.match.params.id].reservations[ownProps.match.params.bookingId],
         user: state.session.id,
-        restaurant: state.entities.restaurants[state.entities.bookings[ownProps.match.params.bookingId].restaurant_id],
+        restaurant: state.entities.restaurants[state.entities.users[ownProps.match.params.id].reservations[ownProps.match.params.bookingId].restaurant_id],
         formType: 'Update'
     }
 }

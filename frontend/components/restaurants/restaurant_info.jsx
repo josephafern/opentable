@@ -1,5 +1,6 @@
 import React from 'react';
 import RestReview from './rest_review';
+import { Link } from 'react-router-dom';
 
 const RestaurantInfo = (props) => {
     
@@ -14,6 +15,7 @@ const RestaurantInfo = (props) => {
                     return <RestReview image={props.restaurant.image} review={review} author={props.users[review.author_id]}/>;
                 }) : ''}
             </div>
+            <Link to={`/restaurants/${props.restaurant.id}/reviews/new`}><button className='reserve-btn centered'>Write a review!</button></Link>
         </div>
     );
 }

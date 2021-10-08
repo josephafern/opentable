@@ -5,6 +5,7 @@ import { fetchRestaurant } from '../../actions/restaurant_actions';
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        booking: null,
         user: state.session.id,
         restaurant: state.entities.restaurants[ownProps.match.params.restId],
         formType: 'New'

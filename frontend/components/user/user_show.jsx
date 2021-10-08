@@ -10,9 +10,8 @@ class UserShow extends React.Component {
     }
 
     componentDidMount(){
-        window.scrollTo(0, 0);
-        this.props.fetchRestaurants().then(() => this.props.fetchBookingsByUser(this.props.match.params.id))
-        .then(()=> this.props.fetchReviewsByUser(this.props.match.params.id));
+       
+        this.props.fetchRestaurants().then(() => this.props.fetchUser(this.props.match.params.id));
     }
 
     componentDidUpdate(){
@@ -20,6 +19,7 @@ class UserShow extends React.Component {
     }
 
     render(){
+        if (!this.props.user) return null;
         return (
             <div className='user-show'>
                 <div className='user-header'>
@@ -28,23 +28,28 @@ class UserShow extends React.Component {
                 <div className='user-res-container'>
                     <div className='user-res-title'>Upcoming Reservations</div>
                     <ul className='user-res-items'>
-                        {Object.keys(this.props.reservations).map(key => {
+                        {this.props.user.reservations ? Object.values(this.props.user.reservations).map((reservation, i) => {
                             return (<Reservation
-                                key={key}
-                                reservation={this.props.reservations[key]}
-                                restaurant={this.props.restaurants[this.props.reservations[key].restaurant_id]}
+                                key={i}
+                                reservation={reservation}
+                                restaurant={this.props.restaurants[reservation.restaurant_id]}
                                 history={this.props.history}
                                 userId={this.props.user.id}
                                 deleteBooking={this.props.deleteBooking}/>);
-                        })}
+                        }) : ''}
                     </ul>
                 </div>
                 <div className='user-res-container'>
                     <div className='user-res-title'>Reviews</div>
                     <ul className='user-res-items'>
-                        {this.props.reviews.map(review => {
-                            return <UserReview review={review} restaurant={this.props.restaurants[review.restaurant_id]}/>;
-                        })}
+                        {this.props.user.reviews ? Object.values(this.props.user.reviews).map((review, i) => {
+                            return <UserReview  key={i} 
+                                                review={review}
+                                                userId={this.props.user.id}
+                                                history={this.props.history}
+                                                restaurant={this.props.restaurants[review.restaurant_id]}
+                                                deleteReview={this.props.deleteReview}/>;
+                        }) : ''}
                     </ul>
                 </div>
             </div>

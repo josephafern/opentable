@@ -8,9 +8,9 @@ const Booking = (props) => {
             <div className='m-a-r'>Make a reservation!!</div>
             <p>Some available times:</p>
             <div className='presets-container'>
-                <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restId}/bookings/new/19:45`}><div className='mar-preset'>19:45</div></Link>
-                <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restId}/bookings/new/20:30`}><div className='mar-preset'>20:30</div></Link>
-                <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restId}/bookings/new/21:15`}><div className='mar-preset'>21:15</div></Link>
+                <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restId}/bookings/new/19:45`}><div className='mar-preset'>7:45pm</div></Link>
+                <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restId}/bookings/new/20:30`}><div className='mar-preset'>8:30pm</div></Link>
+                <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restId}/bookings/new/21:15`}><div className='mar-preset'>9:15pm</div></Link>
             </div>
             <Link to={`/restaurants/${props.restId}/bookings/new`}><button className='reserve-btn'>Find a table!</button></Link>
             </div>

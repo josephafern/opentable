@@ -3,11 +3,7 @@ import React from 'react';
 import RestaurantSearch from './search';
 import { findRestraurants } from '../../actions/restaurant_actions';
 
-const mapStateToProps = (state) => {
-    return {
 
-    }
-}
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -15,4 +11,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RestaurantSearch)
+export default connect(null, mapDispatchToProps)(RestaurantSearch)

@@ -9,9 +9,17 @@ class SearchIndex extends React.Component {
     }
     
     render(){
+        if (!this.props.restaurants.length){
+            return (
+                <div className='search-idx'>
+                    <div>Oops! We couldn't find any matching that query.</div>
+                    <RestaurantSearchContainer index={true} />
+                </div>
+            );
+        }
         return (
             <div className='search-idx'>
-                <RestaurantSearchContainer index={true}/>
+                <RestaurantSearchContainer history={this.props.history} index={true}/>
                 <div className='search-items'>
                 {this.props.restaurants.map(restaurant => {
                     return <SearchIndexItem key={restaurant.id} restaurant={restaurant}/>

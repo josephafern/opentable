@@ -13,6 +13,7 @@ class Splash extends React.Component {
                 <RestaurantSearchContainer history={this.props.history}/>
                 <img src={window.bannerUrl} className='hero-img'/>
                 <SplashIndexContainer />
+                <div className='page-back'></div>
             </div>
         );
     }

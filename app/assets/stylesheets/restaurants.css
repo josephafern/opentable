@@ -1,5 +1,6 @@
 .rest-show {
-    height: 1800px;
+    height: auto;
+    position: relative;
 }
 
 .reserve-btn {
@@ -71,7 +72,8 @@
     font-size: 20px;
     position: absolute;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
+    
 }
 
 .rest-review-info .rating {
@@ -79,7 +81,7 @@
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
     margin-left: 15px;
-    margin-top: 30px;
+    margin-top: 40px;
     position: absolute;
     display: flex;
     align-items: center;
@@ -90,11 +92,10 @@
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
     margin-left: 22px;
-    margin-top: 55px;
+    margin-top: 65px;
     position: absolute;
     width: 380px;
-    height: 140px;
-}
+    height: 120px;
 }
 
 .rest-review-info .username {
@@ -103,6 +104,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(154, 154, 154);
 }
 
 .rest-review-icon {

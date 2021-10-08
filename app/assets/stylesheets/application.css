@@ -68,6 +68,9 @@ table {
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+#root {
+    max-height: none;
+}
 
  .modal-show {
     display: block;
@@ -103,6 +106,18 @@ table {
     border: 1px solid gray;
 }
 
+.page-back {
+    visibility: visible;
+    height: 2000px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(169, 169, 169, 0.256);
+    opacity: 40%;
+    z-index: 1;
+    border: 1px solid gray;
+}
+
 #booking-form-back {
     visibility: hidden;
     height: 2000px;
@@ -123,7 +138,7 @@ table {
     width: 100%;
     border: 1px solid gray;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
     background-color: white;
     border-left: none;
     border-right: none;
@@ -271,7 +286,7 @@ input:focus::placeholder {
     left: 50%;
     width: 620px;
     margin-left: -310px;
-    z-index: 1;
+    z-index: 2;
 
 }
 
@@ -291,6 +306,7 @@ input:focus::placeholder {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    z-index: 2;
 }
 
 .splash-index-item {
@@ -366,7 +382,7 @@ input:focus::placeholder {
 }
 
 .res-show-img {
-    position: absolute;
+    position: relative;
     width: 1200px;
     height: 400px;
     left: 50%;
@@ -430,11 +446,11 @@ input:focus::placeholder {
 
 .show-container {
     width: 1000px;
-    z-index: 1;
-    position: absolute;
+    z-index: 2;
+    position: relative;
     display: flex;
     flex-direction: row;
-    top: 350px;
+    bottom: 60px;
     left: 50%;
     margin-left: -500px;
 }
@@ -471,7 +487,7 @@ span.price {
     top: 300px;
     left: 50%;
     margin-left: -200px;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     padding-top: 40px;
     
@@ -502,6 +518,13 @@ h2 {
     margin-bottom: 35px;
 }
 
+h5 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    color: rgb(84, 84, 84);
+    margin-bottom: 5px;
+}
+
 .loader {
     border: 16px solid rgb(182, 182, 182);
     border-top: 16px solid crimson;
@@ -517,7 +540,7 @@ h2 {
     margin-left: -40px;
 }
 
-.footer {
+#footer {
     width: 100%;
     height: 120px;
     background-color: rgba(191, 191, 191, 0.625);
@@ -527,6 +550,8 @@ h2 {
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
     color: gray;
+    z-index: 2;
+    position: absolute;
 }
 
 .footer-icon {
@@ -536,7 +561,7 @@ h2 {
     margin: 0 10px;
 }
 
-.footer a {
+#footer a {
     text-decoration: none;
 }
 
@@ -581,6 +606,27 @@ h2 {
     display: none;
 }
 
+.rev-info {
+    padding-top: 20px;
+}
+
+#rev-btn {
+   
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    width: 275px;
+    height: 40px;
+    color: white;
+    background-color: #da3743;
+    font-size: 20px;
+}
+
+#rev-btn:hover {
+    background-color: #91242c;
+    cursor: pointer;
+}
+
 @-webkit-keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -589,4 +635,10 @@ h2 {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.centered {
+    left: 50%;
+    margin-left: -100px;
+    margin-bottom: 20px;
 }

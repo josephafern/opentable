@@ -4,13 +4,14 @@ class BookingForm extends React.Component {
     constructor(props){
         super(props);
         let currDate = new Date();
+        let currTime = this.props.match.params.time ? this.props.match.params.time : this.props.booking ? this.props.booking.time : '19:30';
         this.state = {
             id: this.props.match.params.bookingId,
             maker_id: this.props.user,
             restaurant_id: parseInt(this.props.restaurant.id),
-            date: currDate.toISOString().slice(0, 10),
-            time: this.props.match.params.time ? this.props.match.params.time : '19:30',
-            guests: 1
+            date: this.props.booking ? this.props.booking.date : currDate.toISOString().slice(0, 10),
+            time: currTime,
+            guests: this.props.booking ? this.props.booking.guests : 1
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -66,6 +67,7 @@ class BookingForm extends React.Component {
             <img src={this.props.restaurant.image} className='hero-img'/>
             <div id='booking-feedback'>Success! You're booked.</div>
             <div id='booking-form-back'></div>
+            <div className='page-back'></div>
             </div>
         );
     }
