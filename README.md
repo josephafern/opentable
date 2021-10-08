@@ -3,7 +3,7 @@
 <img src="https://open-table-seeds.s3.us-west-1.amazonaws.com/READMEimgs/first-final.jpg" />
 <br/>
 <a href="https://empty-chairs.herokuapp.com/#/">
-  <img src="https://open-table-seeds.s3.us-west-1.amazonaws.com/READMEimgs/button.png" style="width: 150px; height: 75px; margin-left: 200px;"/> 
+  <img src="https://open-table-seeds.s3.us-west-1.amazonaws.com/READMEimgs/button.png" style="width: 150px; height: 50px;"/> 
 </a>
 <br/>
 
