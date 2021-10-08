@@ -58,3 +58,5 @@ Overall, styling proved to be one of the more challenging parts of the project. 
 ## Future Additions
 
 I would in the near future to add search categories for the Restaurant Search feature. I would also like to add more functionality to the reservation modal as well as an enterprise login that allows for Restaurant creation as well inputing of upcoming available reservation times that would then render to the page (at the moment, there are just standard boilerplate time slots.
+
+_Shoutout to my project mentor, Diego Chavez. THANK YOU!!_
