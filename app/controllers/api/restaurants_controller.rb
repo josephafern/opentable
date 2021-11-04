@@ -19,10 +19,13 @@ class Api::RestaurantsController < ApplicationController
         end
     end
 
-    def search
+     def search
         queryInfo = params[:query]
         @restaurants = Restaurant.where('name ILIKE ? OR cuisine ILIKE ?', "%#{queryInfo}%", "%#{queryInfo}%")
-        if @restaurants.length > 0
+        if params[:query] == ''
+            @restaurants = []
+            render :index
+        elsif @restaurants.length > 0
             render :index
         else
             render json: ["Uh oh! We we're unable to find any restaurants matching this information. Please try another query."], status: 404

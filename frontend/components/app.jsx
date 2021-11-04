@@ -18,15 +18,16 @@ const App = () => (
     <div id='app'>
         <NavbarContainer />
         <Switch>
-            <Route exact path='/' component={Splash}/>
-            <Route exact path='/restaurants/:id' component={RestaurantShowContainer} />
-            <Route path='/restaurants/search/:query' component={SearchIndexContainer}/>
+            <Route exact path='/' component={Splash} />
+            <Route exact path='/restaurants/search/:query' component={SearchIndexContainer} />
+            <Route exact path='/restaurants/search' component={SearchIndexContainer} />
+            <Route exact path='/restaurants/show/:id' component={RestaurantShowContainer} />
             <ProtectedRoute exact path='/restaurants/:restId/bookings/new' component={BookingFormContainer} />
-            <ProtectedRoute path='/restaurants/:restId/bookings/new/:time' component={BookingFormContainer} />
-            <ProtectedRoute exact path='/restaurants/:id/reviews/new' component={ReviewFormContainer}/>
-            <ProtectedRoute exact path='/users/:id/reviews/:reviewId/edit' component={ReviewUpdateContainer}/>
+            <ProtectedRoute exact path='/restaurants/:restId/bookings/new/:time' component={BookingFormContainer} />
+            <ProtectedRoute exact path='/restaurants/:id/reviews/new' component={ReviewFormContainer} />
+            <ProtectedRoute exact path='/users/:id/reviews/:reviewId/edit' component={ReviewUpdateContainer} />
             <ProtectedRoute exact path='/users/:id' component={UserShowContainer} />
-            <ProtectedRoute exact path='/users/:id/bookings/:bookingId' component={BookingUpdate}/>
+            <ProtectedRoute exact path='/users/:id/bookings/:bookingId' component={BookingUpdate} />
         </Switch>
         <Footer />
     </div>

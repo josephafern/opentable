@@ -1,10 +1,9 @@
 .search-items {
-    position: relative;
+    
     box-shadow: 0px 0px 2px rgba(0,0,0,0.10);
     width: 600px;
-    left: 50%;
-    top: 150px;
-    margin-left: -300px;
+    margin: 0px auto;
+    margin-top:140px;
     z-index: 1;
     background-color: white;
     border-radius: 5px;
@@ -17,6 +16,7 @@
     border-radius: 5px;
     box-shadow: inset 0 3px 3px 0 hsla(0deg, 0%, 0%, 0.4);
     padding-left: 10px;
+    color:gray;
 }
 
 .search-input::placeholder {
@@ -60,6 +60,7 @@
 .search-idx {
     min-height: 1200px;
     background-color: #f0f0f0b8;
+    padding-bottom: 60px;
 }
 
 .search-item {
@@ -112,4 +113,32 @@
     width: 30px;
     height: 30px;
     color: white;
+}
+
+.search-error {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: gray;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-left: 3px solid red;
+    width: 557px;
+    height: 50px;
+    display: flex;
+    text-align: left;
+    border-radius: 3px;
+    margin-left: 31px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-warning {
+    width: 20px;
+    height: 20px;
+    color: red;
+    margin-left: 10px;
+}
+
+.search-error span {
+    margin-left: 10px;
 }
