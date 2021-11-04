@@ -20,7 +20,7 @@ class UserShow extends React.Component {
 
     render(){
         if (!this.props.user) return null;
-        if (Object.keys(this.props.restaurants).length === 0) return null;
+        if (Object.keys(this.props.restaurants).length < 20) return null;
         return (
             <div className='user-show'>
                 <div className='user-header'>
