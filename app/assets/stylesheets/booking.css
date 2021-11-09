@@ -72,7 +72,7 @@ span.body-header {
     background-color: white;
     width: 180px;
     text-align: center;
-    color: transparent;
+    color: rgb(162, 162, 162);
     text-shadow: 0 0 0 rgb(164, 164, 164);
     font-size: 18px;
 }
@@ -83,7 +83,7 @@ span.body-header {
     width: 180px;
     height: 180px;
     text-align: center;
-    color: transparent;
+    color: rgb(162, 162, 162);
     text-shadow: 0 0 0 rgb(164, 164, 164);
     font-size: 14px;
 }

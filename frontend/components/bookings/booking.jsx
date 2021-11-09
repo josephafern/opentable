@@ -12,7 +12,7 @@ const Booking = (props) => {
                 <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restId}/bookings/new/20:30`}><div className='mar-preset'>8:30pm</div></Link>
                 <Link style={{ textDecoration: 'none' }} to={`/restaurants/${props.restId}/bookings/new/21:15`}><div className='mar-preset'>9:15pm</div></Link>
             </div>
-            <Link to={`/restaurants/${props.restId}/bookings/new`}><button className='reserve-btn'>Find a table!</button></Link>
+            {props.loggedIn ? <Link to={`/restaurants/${props.restId}/bookings/new`}><button className='reserve-btn'>Find a table!</button></Link> : null}
             </div>
             <div className={props.loggedIn === null ? 'signup-message' : 'signup-message hidden'}>
                 To make a reservation, please sign up or sign in.

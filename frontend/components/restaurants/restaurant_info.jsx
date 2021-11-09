@@ -15,7 +15,8 @@ const RestaurantInfo = (props) => {
                     return <RestReview image={props.restaurant.image} review={review} author={props.users[review.author_id]}/>;
                 }) : ''}
             </div>
-            <Link to={`/restaurants/${props.restaurant.id}/reviews/new`}><button className='reserve-btn centered'>Write a review!</button></Link>
+
+            {props.currentUser ? <Link to={`/restaurants/${props.restaurant.id}/reviews/new`}><button className='reserve-btn centered'>Write a review!</button></Link> : null}
         </div>
     );
 }
