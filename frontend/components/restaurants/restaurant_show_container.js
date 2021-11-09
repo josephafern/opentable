@@ -15,7 +15,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         fetchRestaurant: (restId) => dispatch(fetchRestaurant(restId)),
         fetchAllUsers: () => dispatch(fetchAllUsers())
-        
     }
 }
 

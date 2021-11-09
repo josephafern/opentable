@@ -1,7 +1,6 @@
 import React from 'react';
 import RestaurantInfo from './restaurant_info';
 import Booking from '../bookings/booking';
-import Modal from '../modal'
 
 class RestaurantShow extends React.Component {
     constructor(props) {
@@ -31,7 +30,6 @@ class RestaurantShow extends React.Component {
                     <Booking restId={this.props.restaurant.id} loggedIn={this.props.currentUser} />
                 </div>
                 <div className='page-back'></div>
-                
             </div>
         );
     }
