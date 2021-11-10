@@ -13,8 +13,12 @@ class Api::ReviewsController < ApplicationController
         @review = Review.new(review_params)
         if @review.save
             render :show
+        elsif @review.title == '' && @review.body == ''
+            render json: ['Please enter a valid title and body.'], status: 422
         elsif @review.title == ''
-            render json: ['Please enter a valid title'], status: 422
+            render json: ['Please enter a valid title.'], status: 422
+        elsif @review.body == ''
+            render json: ['Please enter a valid body.'], status: 422
         else
             render json: ['Invalid Params'], status: 422
         end
