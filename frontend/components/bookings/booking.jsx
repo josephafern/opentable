@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Booking = (props) => {
     return (
             <div>
+                {props.loggedIn? 
             <div className='reserve-container'>
             <div className='m-a-r'>Make a reservation!!</div>
             <p>Some available times:</p>
@@ -14,6 +15,7 @@ const Booking = (props) => {
             </div>
             {props.loggedIn ? <Link to={`/restaurants/${props.restId}/bookings/new`}><button className='reserve-btn'>Find a table!</button></Link> : null}
             </div>
+            : null}
             <div className={props.loggedIn === null ? 'signup-message' : 'signup-message hidden'}>
                 To make a reservation, please sign up or sign in.
             </div>
